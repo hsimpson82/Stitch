@@ -153,12 +153,12 @@ body {
   border-radius: 4px;
 }
 
+/* Badges are wide (~3:1) after viewBox crop; size by width so they read large on phones */
 .store-btn__badge {
   display: block;
-  width: min(100%, 22rem);
+  width: 100%;
+  max-width: min(100%, 22rem);
   height: auto;
-  max-width: 100%;
-  max-height: none;
   object-fit: contain;
 }
 
@@ -208,10 +208,8 @@ body {
 
   .store-btn__badge {
     width: auto;
-    max-height: min(
-      clamp(240px, 33vw, 360px),
-      calc((100vw - 3.5rem) / 2 - 0.5rem)
-    );
+    max-width: min(46vw, 200px);
+    height: auto;
   }
 }
 
@@ -284,13 +282,10 @@ body {
     max-width: none;
   }
 
-  /* Large badges; width cap keeps two in the text column */
   .store-btn__badge {
     width: auto;
-    max-height: min(
-      clamp(312px, 66vw, 600px),
-      calc((50vw - 4rem) / 2 - 0.5rem)
-    );
+    max-width: min(260px, 100%);
+    height: auto;
   }
 }
 
