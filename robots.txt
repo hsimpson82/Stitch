@@ -1,0 +1,5 @@
+# https://monena.app/ — replace host if your domain differs
+User-agent: *
+Allow: /
+
+Sitemap: https://monena.app/sitemap.xml
