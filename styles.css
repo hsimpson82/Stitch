@@ -119,11 +119,11 @@ body {
   color: var(--color-primary);
 }
 
-/* Mobile: stack badges — each uses full row width (large, tappable) */
+/* Mobile: stack badges — stretch so width:100% applies (center shrinks to SVG intrinsic width) */
 .store-row {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: stretch;
   gap: 0.875rem;
   width: 100%;
   max-width: 100%;
@@ -134,7 +134,8 @@ body {
 .store-btn {
   flex: 0 0 auto;
   width: 100%;
-  max-width: 22rem;
+  max-width: min(100%, 26rem);
+  margin-inline: auto;
   display: flex;
   justify-content: center;
   line-height: 0;
@@ -157,7 +158,7 @@ body {
 .store-btn__badge {
   display: block;
   width: 100%;
-  max-width: min(100%, 22rem);
+  max-width: min(100%, 26rem);
   height: auto;
   object-fit: contain;
 }
@@ -204,6 +205,7 @@ body {
     flex: 1 1 50%;
     min-width: 0;
     max-width: none;
+    margin-inline: 0;
   }
 
   .store-btn__badge {
@@ -280,6 +282,7 @@ body {
     flex: 0 1 auto;
     width: auto;
     max-width: none;
+    margin-inline: 0;
   }
 
   .store-btn__badge {
