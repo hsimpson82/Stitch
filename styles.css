@@ -51,7 +51,7 @@ body {
   top: 1rem;
 }
 
-/* Mobile: badge → title → image → lead → download heading → pricing note → store badges */
+/* Mobile: badge → title → image → lead → downloads block (heading + badges) */
 .hero {
   display: flex;
   flex-direction: column;
@@ -109,25 +109,22 @@ body {
   color: var(--color-on-surface);
 }
 
+.hero__downloads {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+}
+
 .hero__download-heading {
-  margin: 0.25rem 0 0;
+  margin: 0;
   font-family: var(--font-body);
   font-size: 0.8125rem;
   font-weight: 600;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--color-primary);
-}
-
-.hero__pricing-note {
-  margin: 0.35rem 0 0;
-  font-family: var(--font-body);
-  font-size: 0.6875rem;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  line-height: 1.35;
-  color: var(--color-on-surface-muted);
 }
 
 .store-row {
@@ -139,7 +136,7 @@ body {
   gap: 0.5rem;
   width: 100%;
   max-width: 21rem;
-  margin: 0.35rem auto 0;
+  margin: 0;
   padding: 0;
 }
 
@@ -243,7 +240,7 @@ body {
 
   .hero__visual {
     grid-column: 2;
-    grid-row: 1 / 6;
+    grid-row: 1 / 5;
     align-self: center;
     max-width: none;
     width: 100%;
@@ -259,29 +256,24 @@ body {
     max-width: none;
   }
 
-  .hero__download-heading {
+  .hero__downloads {
     grid-column: 1;
     grid-row: 4;
-    margin: 0 0 0.25rem;
-    text-align: left;
+    align-items: flex-start;
+    gap: 0.5rem;
   }
 
-  .hero__pricing-note {
-    grid-column: 1;
-    grid-row: 5;
-    margin: 0 0 0.4rem;
+  .hero__download-heading {
+    margin: 0;
     text-align: left;
   }
 
   .store-row {
-    grid-column: 1;
-    grid-row: 6;
     justify-content: flex-start;
     align-items: center;
     flex-wrap: wrap;
     gap: 1.25rem;
     max-width: none;
-    margin: 0;
   }
 
   .store-btn {
